@@ -13,11 +13,20 @@
   }
 }
 .sidebar-sticky {
+  height: 100%;
   padding-top: 5%;
   position: absolute;
+  justify-content: center;
 }
 .sidebar-about {
   padding-bottom:10%;
+  margin-top: 60%;
+}
+.sidebar-social {
+  left: 23%;
+    position: absolute;
+    display: flex;
+    bottom: 28%;
 }
 .spread-btn{
   left: 7%;
