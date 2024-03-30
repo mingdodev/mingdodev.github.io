@@ -48,8 +48,8 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             project
-    url:               /project/
+  - title:             portfolio
+    url:               /portfolio/
   - title:             blog
     url:               /blog/
     submenu: 
@@ -57,6 +57,8 @@ menu:
         url:           /cloud/
       - title:         network
         url:           /network/
+      - title:         dev
+        url:           /dev/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
