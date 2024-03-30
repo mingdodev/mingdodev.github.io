@@ -62,3 +62,17 @@
     display: block;
   }
 }
+
+// post style
+.post-date {
+  font-weight: 500;
+}
+.post-date > span > span {
+  text-transform: uppercase;
+}
+.read-more > a {
+  font-weight: 500;
+}
+.related-posts time {
+  font-weight: 500;
+}
