@@ -1,6 +1,20 @@
 {% if page.comments %}
 <aside class="comments related" role="complementary">
   <h2 class="hr-bottom">{{ site.data.strings.comments | default:"Comments" }}</h2>
-  {% include my-comments.html %}
+  <script src="https://giscus.app/client.js"
+        data-repo="mingdodev/mingdodev.github.io"
+        data-repo-id="R_kgDOLXr23g"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOLXr23s4CeVeo"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="0"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="noborder_light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        async>
+</script>
 </aside>
 {% endif %}
