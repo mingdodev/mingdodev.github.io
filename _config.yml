@@ -27,6 +27,8 @@ title:                 do
 description:           >
   개에서 개발자까지
 
+og_image: /assets/img/sidebar-bg.png
+
 # A shorter description for the sidebar.
 tagline:               hey this is my blog
 
