@@ -92,7 +92,12 @@ remote_theme: hydecorp/hydejack@v9
 
 # Customizaton
 # ----------------------------------------------------------------------------------------
- 
+ image:
+  path: /assets/img/image.png
+  srcset:
+    1920w: /assets/img/image@0,5x.jpg
+    960w:  /assets/img/image@0,25x.jpg
+    480w:  /assets/img/image@0,125x.jpg
 # Sidebar image and theme color of the site.
 accent_image:          /assets/img/sidebar-bg.png
 accent_color:          rgb(23, 174, 255)
