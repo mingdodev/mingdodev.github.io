@@ -406,7 +406,7 @@ jekyll_compose:
     drafts:
       layout: blog
       description: > 
-        my blog
+        blog description
       image:
         path: /assets/img/sidebar-bg.jpg
     posts:
