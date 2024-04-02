@@ -25,7 +25,7 @@ title:                 do
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  my blog
+  개에서 개발자까지
 
 # A shorter description for the sidebar.
 tagline:               hey this is my blog
