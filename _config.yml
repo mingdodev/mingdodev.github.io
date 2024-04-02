@@ -404,17 +404,15 @@ sass:
 jekyll_compose:
   default_front_matter:
     drafts:
-      layout: post
+      layout: blog
       description: > 
-        A short ~160 character description of your post for search engines,
-        social media previews, etc.
+        my blog
       image:
         path: /assets/img/sidebar-bg.jpg
     posts:
       layout: post
       description: > 
-        A short ~160 character description of your post for search engines,
-        social media previews, etc.
+        my post
       image:
         path: /assets/img/sidebar-bg.jpg
     projects:
