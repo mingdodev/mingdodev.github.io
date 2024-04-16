@@ -2,7 +2,7 @@
 layout: post
 title:  "[DB] Join"
 author: "minseo"
-categories: [blog, CSE]
+categories: [blog, cse]
 tags: [Oracle, DB]
 comments: true
 ---
@@ -89,7 +89,7 @@ Cross Join / Cartesian Product, Inner Join, Natural Join, Non-equi Join, Self Jo
         
     - 세타 조인의 결과는 두 릴레이션(테이블)의 카티션 곱에 조인 조건을 적용한 결과와 같다.
 
-<center><img src="../../static/img/240403/Theta Join.png" width="90%"></center>
+<center><img src="../../../static/img/240403/Theta Join.png" width="90%"></center>
 
 - 여기서 또 한 가지 의문이 생긴다. 그렇다면 세타 조인과 내부 조인은 어떤 차이가 있는가?
 

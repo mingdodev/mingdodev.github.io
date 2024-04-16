@@ -58,7 +58,7 @@ menu:
       - title:         cloud
         url:           /cloud/
       - title:         CSE
-        url:           /CSE/
+        url:           /cse/
       - title:         do
         url:           /do/
 
