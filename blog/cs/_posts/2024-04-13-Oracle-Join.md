@@ -2,7 +2,7 @@
 layout: post
 title:  "[DB] Join"
 author: "minseo"
-categories: [blog, cse]
+categories: [blog, cs]
 tags: [Oracle, DB]
 comments: true
 ---
