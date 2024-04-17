@@ -25,10 +25,10 @@ title:                 do
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  개에서 개발자까지
+  moonshot
 
 # A shorter description for the sidebar.
-tagline:               hey this is my blog
+# tagline:               
 
 # A list of keywords for your blog
 keywords:              [server, cloud, experience]
@@ -95,7 +95,7 @@ remote_theme: hydecorp/hydejack@v9
  
 # Sidebar image and theme color of the site.
 accent_image:          /assets/img/sidebar-bg.png
-accent_color:          rgb(23, 174, 255)
+accent_color:          rgb(204, 212, 222)
 
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
