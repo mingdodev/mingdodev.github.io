@@ -6,7 +6,7 @@ categories: [blog, cs]
 tags: [Oracle, DB]
 comments: true
 ---
-# [DB] Join
+# [Database] Join
 
 <center><img src="https://allvectorlogo.com/img/2017/02/oracle-database-logo.png" width="50%"></center>
 
