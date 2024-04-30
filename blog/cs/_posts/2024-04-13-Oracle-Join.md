@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[DB] Join"
+title:  "[Database] Join"
 author: "minseo"
 categories: [blog, cs]
 tags: [Oracle, DB]
