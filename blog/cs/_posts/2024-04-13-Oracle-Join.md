@@ -5,7 +5,6 @@ author: "minseo"
 categories: [blog, cs]
 tags: [Oracle, DB]
 comments: true
-permalink: '/:categories/:year/:month/:day/:title/'
 ---
 # [Database] Join
 
