@@ -12,7 +12,7 @@ comments: true
 <center><img src="../../../static/img/logo/spring-boot-logo.png" width="40%"></center>
 <br><br><br>
 
-회원가입을 할 때, 입력한 이메일로 인증번호를 전송해 본인 인증을 하는 기능을   SMTP server와 redis를 이용하여 구현해보았다.
+회원가입을 할 때, 입력한 이메일로 인증번호를 전송해 본인 인증을 하는 기능을 SMTP server와 redis를 이용하여 구현해보았다.
 
 ## ❗️ To do
 
@@ -21,7 +21,7 @@ comments: true
 
 <br>
 
-> 해당 프로젝트는 `Spring Boot 3.2.3` , `java 17` 을 사용하였다.  
+> 해당 프로젝트는 `Spring Boot 3.2.3` , `java 17`, `thymeleaf template engine` 을 사용하였다.  
 > Gmail을 host email로 사용하였다.
 
 <br>
@@ -72,11 +72,11 @@ comments: true
 ```
 
 - `username` : 이메일을 전송할 주체의 이메일 주소 (host mail)
-- `password` : 발급받은 App password
+- `password` : 해당 계정으로 발급받은 App password
 
 ## Project Layers
 
-이해를 돕기 위해 이메일 전송과 관련된 파일만 표기했다.
+이해를 돕기 위해, 프로젝트에서 이메일 전송 기능을 구현한 파일의 위치를 나타낸 구조도이다.
 
 ```
     📁
@@ -95,7 +95,7 @@ comments: true
 
 # Configuration
 
-이메일 전송과 redis 연동을 위해 설정 파일을 이용하여 Bean 등록을 해줄 것이다.
+이메일 전송과 redis 연동을 위해 `@Configuration` 설정 파일을 이용하여 Bean 등록을 해줄 것이다.
 
 ## EmailConfig
 
@@ -103,7 +103,7 @@ comments: true
     @Configuration
     public class EmailConfig {
 
-        // set important data
+        /* set important data */
         @Value("${spring.mail.username}") private String username;
         @Value("${spring.mail.password}") private String password;
 
@@ -116,7 +116,7 @@ comments: true
             mailSender.setUsername(username);
             mailSender.setPassword(password);
 
-            // Use Properties Object to set JavaMailProperties
+            /* Use Properties Object to set JavaMailProperties */
             Properties javaMailProperties = new Properties();
             javaMailProperties.put("mail.transport.protocol", "smtp");
             javaMailProperties.put("mail.smtp.auth", "true");
@@ -124,7 +124,7 @@ comments: true
             javaMailProperties.put("mail.smtp.starttls.enable", "true");
             javaMailProperties.put("mail.debug", "true");
             javaMailProperties.put("mail.smtp.ssl.trust", "smtp.gmail.com");
-            javaMailProperties.put("mail.smtp.ssl.protocols", "TLSv1.2"); // TLS v1.2를 사용
+            javaMailProperties.put("mail.smtp.ssl.protocols", "TLSv1.3"); // TLS v1.3을 사용
 
             mailSender.setJavaMailProperties(javaMailProperties);
 
@@ -134,7 +134,17 @@ comments: true
 
 ```
 
+`org.springframework.mail.javamail.JavaMailSender`의 JavaMailSender를 빈으로 등록한다.
+
+개인정보 보호 및 보안을 위해 이메일을 암호화하는 프로토콜로 `TLS`와 `SSL`를 사용할 수 있다.  
+TLS(Trasport Layer Security)도 일반적으로는 SSL(Secure Sockets Layer)인데, TLS가 훨씬 안전한 버전의 SSL이라고 한다. Google SMTP 서버는 TLS 1.3 version까지 지원하므로 이 범위 내에서 사용할 프로토콜의 버전을 설정해준다. 
+
 ## RedisConfig
+
+Redis 데이터베이스에 연결하고 RedisTemplate을 사용할 수 있도록 빈을 등록해준다.  
+`RedisConnectionFactory`가 RedisConnection을 생성하고 PersistenceExceptionTranslator 역할을 수행해준다.  
+이때 connector로 사용할 client를 지정해줘야 하는데, lettuce를 사용하도록 설정해주었다.
+
 
 ```java
     @EnableRedisRepositories
@@ -184,7 +194,8 @@ Member 객체를 사용하는 것은 불가능하다. 따라서 input 태그에 
 
 ## EmailRequestDto
 
-- 이메일 email 변수를 갖는 DTO 객체
+- emailSend에 사용할 데이터 전송 객체
+- 이메일 email 변수를 갖는 DTO
 
 ```java
     @Getter
@@ -227,7 +238,7 @@ Member 객체를 사용하는 것은 불가능하다. 따라서 input 태그에 
     </script>
 ```
 
-script로 인증 버튼을 클릭했을 때 실행할 함수를 추가해줬다.
+script로 인증 버튼을 클릭했을 때 실행할 함수를 추가한다.
 
 emailRequestDto를 JSON 문자열로 변환하여 data에 담았는데, 
 ajax 요청은 기본적으로 “application/x-www-form-urlencoded” contentType을 사용하기 때문에 "application/json"으로 변경해주었다.
@@ -249,6 +260,7 @@ controller로부터 code 값이 담긴 JSON response를 받으면 인증번호 �
         @PostMapping("/signup/email")
         public Map<String, String> mailSend(@RequestBody @Valid EmailRequestDto emailRequestDto) {
             String code = emailSendService.joinEmail(emailRequestDto.getEmail());
+            // response를 JSON 문자열으로 반환
             Map<String, String> response = new HashMap<>();
             response.put("code", code);
 
@@ -261,8 +273,8 @@ emailRequestDto에 존재하는 email 변수에 JSON의 email 데이터가 저�
 
 이메일 값을 보내고 코드 값을 받는 이 과정은 단순히 Data를 주고받는 동작에 그쳐야 한다.  
 따라서 `@RestController` 어노테이션을 사용하여, EmailController가 JSON 데이터를 반환하는 역할을 수행하도록 만들어준다.  
-`@Controller`를 사용하면 요청에 대한 응답으로 View를 반환한다.  
-그래서 Controller로부터 오는 응답 값과 일치하는 thymeleaf 템플릿을 찾아 반환하려는 동작이 수행되고, 오류가 발생하게 된다.
+만약 `@Controller`를 사용하게 되면 요청에 대한 응답으로 View를 반환한다.  
+그래서 Controller로부터 오는 응답 값과 일치하는 thymeleaf 템플릿을 찾아 반환하려는 동작이 수행되고, 오류가 발생하게 된다.  
 
 ## EmailSendService
 
@@ -329,6 +341,9 @@ emailRequestDto에 존재하는 email 변수에 JSON의 email 데이터가 저�
 
 ```
 
+이메일을 작성하고 전송하는 서비스이다. 랜덤 인증번호를 생성하여 redis에 3분 동안 이메일과 함께 저장한다.  
+메일 템플릿은 따로 템플릿 파일을 분리해도 좋고 필요에 따라 작성하면 된다.
+
 ## 결과 화면 
 
 <center><img src="../../../static/img//240508/code-send.png" width="90%"></center>
@@ -361,7 +376,7 @@ redis에서 email 키값으로 데이터를 조회해보면 이메일로 전송�
 ## EmailCheckDto
 
 - 이메일 email과 인증번호 authNum 변수를 갖는 DTO 객체
-- 캐시 서버 redis에서 특정 이메일에 부여된 인증번호를 조회하기 위해 필요하다.
+- redis에서 특정 이메일에 부여된 인증번호를 조회하기 위해 필요하다.
 
 ```java
     @Data
@@ -401,7 +416,7 @@ redis에서 email 키값으로 데이터를 조회해보면 이메일로 전송�
                     },
                     error: function(xhr, status, error) {
                         if (xhr.status == 500) {
-                            alert("잘못된 인증번호이거나 인증번호가 만료되었습니다.");
+                            alert("잘못된 인증번호이거나 시간 초과로 인증번호가 만료되었습니다.");
                         } else {
                             alert("오류가 발생했습니다: " + status);
                         }
@@ -412,7 +427,7 @@ redis에서 email 키값으로 데이터를 조회해보면 이메일로 전송�
     </script>
 ```
 
-전달할 변수가 하나 늘었다는 것 외에는 requestDto를 전달하는 방식과 동일하다.  
+전달할 변수 외에는 requestDto를 전달하는 방식과 동일하다.  
 XMLHttpRequest(XHR)로부터 서버에서 온 Internal Server Error(500)을 감지하면 오류 메시지를 출력한다.  
 status는 Ajax 요청이 success인지 error인지를 나타내는 문자열이다.
 
@@ -429,7 +444,7 @@ status는 Ajax 요청이 success인지 error인지를 나타내는 문자열이�
             return "이메일 인증 성공!";
         }
         else {
-            throw new NullPointerException("잘못된 인증번호이거나 인증번호가 만료되었습니다.");
+            throw new NullPointerException("이메일 인증 실패!");
         }
     }
 ```
@@ -456,10 +471,16 @@ redis에서 email을 key값으로 value를 불러와 입력한 코드 값과 비
 
 <center><img src="../../../static/img//240508/code-success.png" width="90%"></center><br><br>
 
-올바른 인증번호 값을 입력하고 확인 버튼을 누르면 다음과 같은 성공 메시지가 출력된다.
+올바른 인증번호 값을 입력하고 확인 버튼을 누르면 다음과 같은 성공 메시지가 출력된다.  
+이렇게 이메일을 보내고 인증하는 기능을 완성할 수 있다!
 
 <br><br>
 <details>
 <summary> &nbsp; 📁 참고 자료</summary>
-❗️ <a href="https://velog.io/@dionisos198/%EC%8A%A4%ED%94%84%EB%A7%81%EC%9C%BC%EB%A1%9C-%EC%9D%B4%EB%A9%94%EC%9D%BC-%EC%9D%B8%EC%A6%9D-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0" target="_blank">https://velog.io/@dionisos198/스프링으로-이메일-인증-구현하기</a>
+    <div>
+    ❗️ <a href="https://velog.io/@dionisos198/%EC%8A%A4%ED%94%84%EB%A7%81%EC%9C%BC%EB%A1%9C-%EC%9D%B4%EB%A9%94%EC%9D%BC-%EC%9D%B8%EC%A6%9D-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0" target="_blank">https://velog.io/@dionisos198/스프링으로-이메일-인증-구현하기</a>
+    </div>
+    <div>
+    ❗️ <a href="https://support.google.com/a/answer/176600?hl=ko" target="_blank">Gmail SMTP 서버를 사용하여 이메일 보내기</a>
+    </div>
 </details>
