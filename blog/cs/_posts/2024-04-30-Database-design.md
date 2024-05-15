@@ -10,7 +10,7 @@ comments: true
 데이터베이스를 설계하는 과정에 대해 구체적으로 공부해보자❗️ 📖
 {:.note}
 
-* toc
+1. toc
 {:toc .large-only}
 
 ## 데이터베이스 설계의 개요
