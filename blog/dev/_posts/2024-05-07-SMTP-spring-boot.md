@@ -60,7 +60,6 @@ comments: true
     spring:
     mail:
         host: smtp.gmail.com
-        port: 587
         username: ${MAIL_ADDRESS}
         password: ${APP_PASSWORD}
         properties:
