@@ -92,3 +92,11 @@
 #search-input::placeholder {
   color: rgb(229, 229, 229);
 }
+#results-container {
+  list-style-type: none;
+}
+.search-title {
+  font-size: 1.08rem;
+  font-weight: var(--font-weight-heading);
+  line-height: 2;
+}

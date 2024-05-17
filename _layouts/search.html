@@ -10,6 +10,8 @@ layout: default
         >
     </div>
   </div>
+
+  <br>
   
   <ul id="results-container"></ul>
 
@@ -21,8 +23,8 @@ SimpleJekyllSearch({
      searchInput: document.getElementById('search-input'),
      resultsContainer: document.getElementById('results-container'),
      json: '/assets/json/search.json',
-     searchResultTemplate: '<div><a href="{url}" title="{desc}">{title}</a></div>',
-     noResultsText: '검색결과가 없습니다',
+     searchResultTemplate: '<li><a class="search-title" href="{url}" title="{desc}">{title}</a></li>',
+     noResultsText: '<div class="search-title"><span style="color: red;"">! </span> No search results</div>',
      limit: 100,
      fuzzy: false
 });
