@@ -5,7 +5,7 @@ author: "minseo"
 categories: [blog, cloud]
 tags: [Docker, ACC]
 comments: true
-image: "https://static-00.iconduck.com/assets.00/docker-icon-2048x522-prfhswr7.png"
+image: "/assets/img/post-cover.png"
 hide_image: true
 ---
 # [Docker] 컨테이너 기술과 Docker
