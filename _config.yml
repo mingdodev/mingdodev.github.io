@@ -38,9 +38,6 @@ keywords:              [server, cloud, experience]
 # It also used by the `jekyll-seo-tag` plugin.
 logo:                  /assets/img/rocketcat.png
 
-# Set opengraph default image.
-og_image:              /assets/img/rocketcat.png
-
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
