@@ -5,6 +5,8 @@ author: "minseo"
 categories: [blog, cs]
 tags: [Oracle, DB]
 comments: true
+image: "https://allvectorlogo.com/img/2017/02/oracle-database-logo.png"
+hide_image: true
 ---
 # [Database] Join
 
