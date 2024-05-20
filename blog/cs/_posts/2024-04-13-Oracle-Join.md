@@ -5,6 +5,7 @@ author: "minseo"
 categories: [blog, cs]
 tags: [Oracle, DB]
 comments: true
+hide_image: true
 ---
 # [Database] Join
 

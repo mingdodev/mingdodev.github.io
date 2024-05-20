@@ -5,6 +5,7 @@ author: "minseo"
 categories: [blog, cs]
 tags: [DB]
 comments: true
+hide_image: true
 ---
 데이터베이스 설계란 어떤 것인지 개념적 설계 위주로 살펴본 후,  
 데이터베이스를 설계하는 과정에 대해 구체적으로 공부해보자❗️ 📖
