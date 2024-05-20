@@ -5,8 +5,6 @@ author: "minseo"
 categories: [blog, cs]
 tags: [Oracle, DB]
 comments: true
-image: "/assets/img/post-cover.png"
-hide_image: true
 ---
 # [Database] Join
 

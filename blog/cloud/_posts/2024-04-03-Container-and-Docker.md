@@ -5,8 +5,6 @@ author: "minseo"
 categories: [blog, cloud]
 tags: [Docker, ACC]
 comments: true
-image: "/assets/img/post-cover.png"
-hide_image: true
 ---
 # [Docker] 컨테이너 기술과 Docker
 

@@ -5,8 +5,6 @@ author: "minseo"
 categories: [blog, dev]
 tags: [spring, spring-boot]
 comments: true
-image: "/assets/img/post-cover.png"
-hide_image: true
 ---
 # [Spring Boot] SMTP로 이메일 인증 구현
 
