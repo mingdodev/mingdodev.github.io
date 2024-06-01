@@ -3,6 +3,6 @@ layout: list
 title:  blog
 slug:   blog
 description: >
-  공부한 내용을 기록하자 ✍️
+  배운 것은 기록으로 남기자 ✍️
 menu: true
 ---
