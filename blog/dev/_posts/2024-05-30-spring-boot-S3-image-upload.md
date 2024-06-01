@@ -7,7 +7,7 @@ tags: [spring, spring-boot, AWS]
 comments: true
 image: "/static/img/logo/springboot-logo.png"
 hide_image: true
-# published: false
+published: false
 ---
 # [Spring Boot] AWS S3로 이미지 업로드 기능 구현
 

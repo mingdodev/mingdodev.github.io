@@ -7,7 +7,7 @@ tags: [AWS, ACC, Network]
 comments: true
 image: "/static/img/logo/aws-logo.png"
 hide_image: true
-# published: false
+published: false
 ---
 # [AWS] 스토리지 서비스와 AWS S3
 
