@@ -132,7 +132,7 @@ hide_image: true
 
 기록하자. 정리해서 남겨두지 않아 사라져 버린 것들이 많다. 블로그 열심히 쓰자.
 
-<br><br><center><img src="../../../static/img/20240601/pirogramming.png" width="100%"></center>
+<br><br><center><img src="../../../static/img/20240601/pirogramming.png" width="100%"></center><br>
 <div class="figcaption"> 20기에 리뉴얼된 홈페이지가 정말 예쁘다. 백엔드 회장님과 프론트엔드 부회장님 작품. </div>
 <br><br>
 
