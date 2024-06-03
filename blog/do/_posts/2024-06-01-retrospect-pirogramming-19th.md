@@ -14,7 +14,7 @@ hide_image: true
 <center><img src="../../../static/img/logo/pirogramming-logo.svg" width="20%"></center>
 <br><br>
 
-> 2023.06.23. - 2024.08.22. Pirogramming 19th
+> 2023.06.23. - 2023.08.22. Pirogramming 19th
 
 <br>
 
