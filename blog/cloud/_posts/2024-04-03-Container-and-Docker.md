@@ -148,7 +148,7 @@ cf. 리소스: CPU, 메모리, I/O, 네트워크 대역 등
 
 ## Docker의 구조
 
-<center><img src="https://docs.docker.com/get-started/images/docker-architecture.webp" width="80%"></center><br>
+<center><img src="https://docs.docker.com/guides/images/docker-architecture.webp" width="80%"></center><br>
 
 도커는 클라이언트-서버 아키텍처를 사용한다. 컨테이너를 생성 및 실행하는 서버 측과 클라이언트가 통신하는 구조이다.
 
