@@ -2,8 +2,8 @@
 layout: post
 title:  "Mac 오라클 설치, HR 샘플 스키마 사용하기"
 author: "minseo"
-categories: [blog, cloud]
-tags: [AWS, ACC]
+categories: [blog]
+tags: [Database, Oracle, Mac]
 comments: true
 hide_image: true
 ---
