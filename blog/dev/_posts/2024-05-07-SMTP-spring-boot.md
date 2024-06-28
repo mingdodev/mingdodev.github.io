@@ -231,7 +231,7 @@ Member 객체를 사용하는 것은 불가능하다. 따라서 input 태그에 
                         }
                     },
                     error: function () {
-                        alert("인증번호를 받을 수 없습니다. 입력하신 이메일 형식을 확인해주세요.");
+                        alert("오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
                     }
                 });
             });
@@ -245,7 +245,7 @@ emailRequestDto를 JSON 문자열로 변환하여 data에 담았는데,
 ajax 요청은 기본적으로 “application/x-www-form-urlencoded” contentType을 사용하기 때문에 "application/json"으로 변경해주었다.
 
 controller로부터 code 값이 담긴 JSON response를 받으면 인증번호 전송에 성공한 것으로 메시지를 띄운다.  
-이메일 형식이 잘못되면 올바른 response가 도착하지 않아 error가 발생한다.
+올바른 response가 도착하지 않거나 redis 서버에 접속하지 못하는 등 error가 발생하면 다른 메시지를 띄운다.
 
 ## EmailController - mailSend
 
@@ -412,7 +412,8 @@ redis에서 email 키값으로 데이터를 조회해보면 이메일로 전송�
                         if (message) {
                             alert("이메일 인증에 성공하였습니다.");
                         } else {
-                            alert("인증번호를 받을 수 없습니다. 입력하신 이메일 형식을 확인해주세요.");
+                            // 현 상태에서는 무의미한 코드 (추후 기능 구체화에 따라 수정)
+                            alert("인증에 실패하였습니다.");
                         }
                     },
                     error: function(xhr, status, error) {
