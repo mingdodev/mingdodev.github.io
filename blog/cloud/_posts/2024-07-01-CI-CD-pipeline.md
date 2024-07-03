@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "l [DevOps] CI/CD란? + 자동화 툴 비교"
+title:  "[DevOps] CI/CD란? + 자동화 툴 비교"
 author: "minseo"
 categories: [blog, cloud]
 tags: [DevOps, ACC]
 comments: true
 hide_image: true
 ---
-# l [DevOps] CI/CD란? + 자동화 툴 비교
+# [DevOps] CI/CD란? + 자동화 툴 비교
 
 한번 배포에 성공하더라도 변경 사항이 생길 때마다 개발자가 여러 가지 작업을 직접 해줘야 하니 몹시 번거로웠다. 코드 저장소의 내용을 변경하는 것만으로 알아서 배포가 이루어질 수 있도록 자동화 도구를 사용해보고자 CI/CD에 관해 찾아보게 되었다. 마침 ACC 초반 세션 중 제대로 정리가 안 되어있는 부분을 발견해서 복습할 겸 추가 공부를 해보려고 한다.
 
