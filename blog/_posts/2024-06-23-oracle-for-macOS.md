@@ -167,7 +167,7 @@ Oracle XE가 설치된 컨테이너는 `x86_64` 아키텍처를 요구한다. �
 
 오라클에서 제공하는 샘플 데이터베이스를 가져와 편리하게 SQL문을 연습해보자. 나는 데이터베이스 수업 시간에 자주 사용했던 HR 스키마를 오라클 데이터베이스에 가져올 것이다. 아래의 레포지토리에서 설치 파일과 방법을 확인할 수 있다.<br><br>
 
-❗️ <a href="https://www.oracle.com/database/sqldeveloper/technologies/download/" target="_blank">SQL Developer Downloads</a>
+❗️ <a href="https://github.com/oracle-samples/db-sample-schemas" target="_blank">oracle-samples/db-sample-schemas repository</a>
 <br><br><br>
 
 여기서 두 번째 문제가 생기는데, 설치 파일을 받아서 바로 실행하면 당연히 오라클이 설치되지도 않은 내 맥 컴퓨터에 설치를 진행하려 할 것이다. 따라서 샘플 스키마 설치를 위한 파일들을 오라클이 설치된 컨테이너 <span style="color:#737373; font-size:14px; font-weight:300;">  오라클이 설치된 컴퓨터라고 생각하자 </span> 로 복사하여, 컨테이너 내부에서 하나하나 실행시키는 방법을 사용하기로 했다.
