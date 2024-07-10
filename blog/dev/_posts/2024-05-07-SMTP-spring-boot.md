@@ -87,7 +87,7 @@ hide_image: true
     │   ├── EmailRequestDto
     │   └── EmailCheckDto
     ├── web/
-    │   └── email/EmailCheckDto
+    │   └── email/EmailController
     ├── EmailConfig
     └── RedisConfig
 ```
