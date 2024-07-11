@@ -219,9 +219,6 @@ HR 스키마를 위한 파일들을 컨테이너의 홈 디렉토리에 전부 �
     <div>
     ❗️ <a href="https://velog.io/@seok990301/CPU-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98" target="_blank">https://velog.io/@seok990301/CPU-아키텍처</a>
     </div>
-    <div>
-    ❗️ <a href="https://support.google.com/a/answer/176600?hl=ko" target="_blank">Gmail SMTP 서버를 사용하여 이메일 보내기</a>
-    </div>
     <li>
     <bl>데이터베이스 수업</bl>
     </li>
