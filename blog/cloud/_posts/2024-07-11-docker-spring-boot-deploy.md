@@ -5,6 +5,7 @@ author: "minseo"
 categories: [blog, cloud]
 tags: [Docker, Springboot]
 comments: true
+hide_image: true
 ---
 # [Docker] Spring Boot 프로젝트 배포하기
 
@@ -331,5 +332,5 @@ Redis도 통신을 위해 `sudo vim etc/redis/redis.conf`으로 설정 파일을
     <div>
     ❗️ <a href="https://happylie.tistory.com/75" target="_blank">레디스 외부 접속 허용 설정</a>
     </div>
-    
+</div>
 </details>
