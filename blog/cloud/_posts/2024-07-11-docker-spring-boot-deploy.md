@@ -141,7 +141,7 @@ comments: true
 
 <center><img src="../../../static/img/240711/ec2-start-1.png" width="70%"></center><br>
 
-프리티어로 사용할 수 있는 Ubuntu 이미지를 사용하였고, x86 아키텍처를 지정해주었다. 이에 맞게 앞서 도커 이미지를 생성해준 것이다. <span style="color:#737373; font-size:14px; font-weight:300;"> amd를 사용할 수 있음에도 x86을 사용하는 이유가 궁금해서 찾아봤는데, 아무래도 아직까지는 x86에서만 지원하는 기술이 많다고 한다. 호환성 문제라고 할 수 있다. </span>
+프리티어로 사용할 수 있는 Ubuntu 이미지를 사용하였고, x86 아키텍처를 지정해주었다. 이에 맞게 앞서 도커 이미지를 생성해준 것이다. <span style="color:#737373; font-size:14px; font-weight:300;"> Arm를 사용할 수 있음에도 x86을 사용하는 이유가 궁금해서 찾아봤는데, 아무래도 아직까지는 x86에서만 지원하는 기술이 많다고 한다. 호환성 문제라고 할 수 있다. </span>
 
 <br><center><img src="../../../static/img/240711/ec2-start-2.png" width="70%"></center><br>
 
