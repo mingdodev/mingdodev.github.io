@@ -55,10 +55,12 @@ menu:
     submenu: 
       - title:         dev
         url:           /dev/
-      - title:         cloud
-        url:           /cloud/
       - title:         cs
         url:           /cs/
+      - title:         java
+        url:           /java/
+      - title:         cloud
+        url:           /cloud/
       - title:         do
         url:           /do/
 
