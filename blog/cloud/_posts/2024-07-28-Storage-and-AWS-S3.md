@@ -5,7 +5,7 @@ author: "minseo"
 categories: [blog, cloud]
 tags: [AWS, S3]
 comments: true
-image: "/static/img/logo/springboot-logo.png"
+image: "/static/img/logo/aws-logo.png"
 hide_image: true
 ---
 # [AWS] 스토리지 서비스와 S3
