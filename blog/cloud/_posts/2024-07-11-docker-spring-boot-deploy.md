@@ -5,6 +5,7 @@ author: "minseo"
 categories: [blog, cloud]
 tags: [Docker, Springboot]
 comments: true
+image: "/static/img/logo/aws-logo.png"
 hide_image: true
 ---
 # [Docker] Spring Boot 프로젝트 배포하기
