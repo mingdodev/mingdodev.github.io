@@ -32,6 +32,11 @@ hide_image: true
 - 구현이 쉬운 편이다.
 - 메모리 저장 및 접근이 효율적이다.
 
+> **선형 자료구조가 메모리 효율이 좋은 이유?**
+>
+> 메모리에서 연속된 블록에 데이터를 저장한다. 따라서 특정 인덱스에 바로 접근할 수 있어 시간복잡도가 O(1). 비선형 자료구조는 임의의 위치에 데이터가 저장되며, 포인터로 연결되기 때문에 메모리 접근에 효율이 좋지 않다.  
+> 선형 자료구조는 가까운 곳에 데이터들이 모여있으므로 Spatial Locality에 의해 CPU의 캐시 효율 또한 좋아진다.
+
 ## 비순환의 연결 그래프
 
 - 비순환 그래프
@@ -96,7 +101,7 @@ hide_image: true
 
     - 루트 노드를 중심으로 두 개의 서브트리로 이루어진 트리
     - 나누어진 두 개의 서브트리도 이진 트리라는 재귀적 특성을 갖는다.
-        - 따라서 공집합도 이진트리로 정의한다.
+        - 재귀적 특성에 따라 공집합도 이진트리로 정의한다.
 
 ## Binary Search Tree
 
@@ -182,7 +187,7 @@ hide_image: true
 
 <br>
 
-다수의 데이터를 효율적으로 관리하기 위해, 차수가 2보다 큰 트리를 사용할 수 있다.
+다수의 데이터를 효율적으로 관리하기 위해, 차수가 2보다 크거나 하나의 노드가 여러 개의 키를 갖는 트리를 사용할 수 있다.
 
 ## B-Tree
 
@@ -205,35 +210,42 @@ hide_image: true
 
     - B-Tree의 변형으로, 모든 데이터가 리프 노드에만 저장된다.
         - 비트리의 **순차 접근 문제**를 해결하기 위해 등장했다.
-        - 데이터를 선형 탐색해야 할 경우 중위 탐색이 필요한데, 그렇다면 트리 전체를 탐색하게 되어 성능 저하가 발생한다.
-    - 리프 노드가 연결 리스트 형태로 저장된다.
-    - 범위 검색에 용이하기 때문에 데이터베이스의 인덱스를 구현할 때 자주 사용한다.
+        - 데이터를 선형 탐색해야 할 경우 중위 탐색이 필요한데, 그렇다면 트리 전체를 탐색하게 되어 성능 저하가 발생한다. 따라서 선형 탐색 성능을 개선한 것이 비 플러스 트리이다.
+
+- 같은 레벨의 모든 키값들이 정렬되어 있고, 같은 레벨의 형제 노드들이 연결 리스트 형태로 저장된다.
+
+- 범위 검색에 용이하기 때문에 데이터베이스의 인덱스를 구현할 때 자주 사용한다.
 
 ## B*Tree
 
 - **비 스타 트리**
 
     - B-Tree의 개량으로, 비트리의 메모리 낭비, 보조 연산 문제를 해결하기 위해 등장했다.
-        - 비트리는 전체 노드의 상당 부분이 비어있게 되는 문제가 있었다.
+        - 비트리는 빈번한 노드 분할과 병합에 따라 전체 노드의 상당 부분이 비어있게 되는 문제가 있었다. 공간 활용도를 높이도록 개선한 것이 비 스타 트리이다.
         - 삽입, 삭제 연산 후 재배치로 인한 연산을 최소화하기 위한 규칙이 추가된다.
 
-    - 루트 노드를 제외한 모든 노드는 최대 2m-1에 대해 2/3 이상의 데이터가 저장되어야 한다.
-    - 노드가 넘칠 경우 일단 양쪽 형제 노드로 키를 재분배하고, 모든 형제 노드가 가득 찬 상태일 때만 노드 분할을 수행한다.
+- 루트 노드를 제외한 모든 노드는 최대 2m-1에 대해 2/3 이상의 데이터가 저장되어야 한다.
+
+- 노드가 넘칠 경우 일단 양쪽 형제 노드로 키를 재분배하고, 모든 형제 노드가 가득 찬 상태일 때만 노드 분할을 수행한다.
 
 <br><br>
 <details>
 <summary> &nbsp; 📁 참고 자료</summary>
 <div>
     <div>
-    ❗️ <a href="https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/main/DataStructure#binary-heap" target="_blank">Interview_Question_for_Beginner - DataStructure
+    ❗️ <a href="https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/main/DataStructure#binary-heap" target="_blank"> Interview_Question_for_Beginner - DataStructure
     </a>
     </div>
     <div>
-    ❗️ <a href="https://velog.io/@chanyoung1998/B%ED%8A%B8%EB%A6%AC" target="_blank">B-트리란?
+    ❗️ <a href="https://velog.io/@chanyoung1998/B%ED%8A%B8%EB%A6%AC" target="_blank"> B-트리란?
     </a>
     </div>
     <div>
-    ❗️ <a href="https://8iggy.tistory.com/191" target="_blank">B+트리, B*트리(B+Tree, B*Tree)
+    ❗️ <a href="https://8iggy.tistory.com/191" target="_blank"> B+트리, B*트리(B+Tree, B*Tree)
+    </a>
+    </div>
+    <div>
+    ❗️ <a href="https://ssocoit.tistory.com/217#" target="_blank"> 간단히 알아보는 B-트리, B+트리, B*트리
     </a>
     </div>
 </div>
