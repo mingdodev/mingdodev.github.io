@@ -11,7 +11,7 @@ hide_image: true
 # [Java] 자바 Null과 Optional
 
 <br><center><img src="../../../static/img/logo/java-horizontal.png" width="35%"></center>
-<br><br>
+<br><br><br>
    
 자바를 모른채 스프링으로 개발할 때 자주 눈에 들어왔던 Optional에 대해 언젠가는 정리하고 싶었다. 여러 강의에서 굉장히 중요한 개념이라고 언급되었는데, 얘가 어떤 좋은 역할을 해낸 건지 정확히 뭐가 중요한 건지 알아보아야겠다.
 

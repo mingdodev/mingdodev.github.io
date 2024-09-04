@@ -333,7 +333,7 @@ hide_image: true
 ### 1. null 입력 값
 
 - 참조 타입은 null을 입력 값으로 받을 수 있지만, 원시 타입은 불가능하다.
-- **cf**. 따라서 참조 타입 변수가 null을 가진다면 이후 이 변수로 메서드를 호출할 때 `NullPointerException`이 발생할 수 있게 된다. 이를 방지하는 것이 `Optional type`으로 자세한 설명은 여기를 참고하자.
+- **cf**. 따라서 참조 타입 변수가 null을 가진다면 이후 이 변수로 메서드를 호출할 때 `NullPointerException`이 발생할 수 있게 된다. 이를 방지하는 것이 `Optional type`으로 자세한 설명은 [여기](https://mingdodev.github.io/blog/java/2024-08-29-Java-Null-Optional/)를 참고하자.
 
 
 ### 2. Generic type
