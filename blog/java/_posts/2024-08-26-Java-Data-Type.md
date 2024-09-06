@@ -48,7 +48,7 @@ hide_image: true
 - `java.lang.Object` 클래스를 상속한다.
 > `java.lang.Object` 클래스는 자바의 최상위 클래스<span style="color:#737373; font-size:14px; font-weight:300;"> root of the class hierarchy </span>로 모든 참조 타입의 부모 역할을 한다.
 >
->객체의 정보를 문자열로 표현하여 반환하는 `toString()`, 두 객체가 같은 주소값을 참조하는지 비교하는 `equals()` 등의 메서드를 정의하고 있다.
+>객체의 정보를 문자열로 표현하여 반환하는 `toString()`, 두 객체가 같은 주소값을 참조하는지 비교하는 `equals()` 등 기본적인 메서드가 구현되어 있어 모든 객체들이 공통적으로 사용할 수 있다.
 
 <br>
 
