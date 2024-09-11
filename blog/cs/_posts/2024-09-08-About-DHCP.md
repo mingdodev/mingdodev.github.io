@@ -376,6 +376,9 @@ DHCP 서버는 동적 할당 외에도 다른 방식으로 IP 주소를 할당�
     ❗️ <a href="https://steadiness.dev/subnet/" target="_blank">서브넷(Subnet), 서브넷 마스크(Subnet Mask) 정리</a>
     </div>
     <div>
+    ❗️ <a href="http://www.ktword.co.kr/test/view/view.php?no=2193" target="_blank">정보통신기술용어해설 DHCP Message Format</a>
+    </div>
+    <div>
     ❗️ <a href="https://www.garykessler.net/library/dhcp.html" target="_blank">The Dynamic Host Configuration Protocol (DHCP) and Windows NT</a>
     </div>
     <div>
