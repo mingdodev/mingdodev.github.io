@@ -45,6 +45,7 @@ group :jekyll_plugins do
   gem "jekyll-titles-from-headings"
   gem "jekyll-include-cache"
   gem "rexml", ">= 3.3.6"
+  gem "google-protobuf", ">= 4.28.2"
 
   # Non-Github Pages plugins:
   gem "jekyll-last-modified-at"
