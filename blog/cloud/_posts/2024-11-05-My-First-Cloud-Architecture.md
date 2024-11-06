@@ -3,9 +3,9 @@ layout: post
 title:  "[AWS] 클라우드 아키텍처 개선으로 AWS와 친해지기"
 author: "minseo"
 categories: [blog, cloud]
-tags: [AWS, ACC, Network]
+tags: [AWS, ACC, Cloud]
 comments: true
-image: "/static/img/logo/springboot-logo.png"
+image: "/static/img/logo/aws-logo.png"
 hide_image: true
 ---
 # [AWS] 클라우드 아키텍처 개선으로 AWS와 친해지기

@@ -1,14 +1,15 @@
 ---
 layout: post
-title:  "[AWS] 클라우드 아키텍처 개선으로 AWS와 친해지기"
+title:  "[AWS] Database"
 author: "minseo"
 categories: [blog, cloud]
 tags: [AWS, ACC, Network]
 comments: true
 image: "/static/img/logo/aws-logo.png"
 hide_image: true
+published: false
 ---
-# [AWS] 클라우드 아키텍처 개선으로 AWS와 친해지기
+# [AWS] Database
 
 <br><br><center><img src="../../../static/img/240330/AWS-logo.png" width="30%" /></center><br><br>
 
