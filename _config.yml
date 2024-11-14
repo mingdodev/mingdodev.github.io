@@ -48,8 +48,10 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             portfolio
-    url:               /portfolio/
+  # - title:             portfolio
+  #   url:               /portfolio/
+  - title:             about
+    url:               /about/
   - title:             blog
     url:               /blog/
     submenu: 
