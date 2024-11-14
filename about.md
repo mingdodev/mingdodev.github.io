@@ -200,7 +200,7 @@ redirect_from:
         </div>
         <div class="my-period">March 2024 - Current</div>
         <div class="my-experience-content-wrapper">
-            <div class="my-experience-content">AWS Clouds Clubs in South Korea, KHU 2nd Member</div>
+            <div class="my-experience-content">AWS Cloud Clubs in South Korea, KHU 2nd Member</div>
         </div>
         <div class="my-period">August - December 2023</div>
         <div class="my-experience-content-wrapper">
