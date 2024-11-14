@@ -213,12 +213,13 @@ hide_image: true
 
     - 반환 값이 `@RestController` 또는 `@ResponseBody` 어노테이션이 붙어 있는 REST API 응답일 경우, 뷰 이름이 아닌 데이터 객체가 반환된다. **HttpMessageConverter**가 반환된 객체를 HTTP response body에 포함하기 위해 JSON, XML 등의 형식으로 직렬화한다.
 
-    <!-- - ResponseEntity로  -->
+    - `ResponseEntity`를 사용하여 HTTP header와 body, 상태 코드 등을 직접 설정해 응답을 반환할 수도 있다.
 
 ## 4. 응답을 클라이언트로 전송
 
-    -  DispatcherServlet은 ViewResolver 또는 HttpMessageConverter에 의해 생성된 최종 응답을 서블릿 컨테이너로 전달하고, 서블릿 컨테이너가 HTTP 응답을 클라이언트에게 전송한다.
+-  DispatcherServlet은 ViewResolver 또는 HttpMessageConverter에 의해 생성된 최종 응답을 서블릿 컨테이너로 전달하고, 서블릿 컨테이너가 HTTP 응답을 클라이언트에게 전송한다.
 
+이러한 과정을 통해 스프링 부트 애플리케이션이 클라이언트가 원하는 데이터를 내려주게 된다!
 
 <br><br>
 <details>
