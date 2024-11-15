@@ -181,8 +181,9 @@ redirect_from:
             <span class="my-job">Server Developer</span>
             <div class="my-bio">
                 <br>
-                Growing <strong>every moment</strong><br>
-                Focusing on building <strong>reasonable</strong> solutions<br><br>
+                feat: grow <strong>every moment</strong><br>
+                style: focus on building <strong>reasonable</strong> solutions<br>
+                docs: <strong>share</strong> learned things<br><br>
                 Delighted to meet you 👋<br>
                 I am a happy developer who loves challenges!
             </div>
