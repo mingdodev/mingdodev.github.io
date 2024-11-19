@@ -13,18 +13,11 @@ redirect_from:
 
 <style>
 
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
     body {
         font-family: 'Inter', sans-serif;
         line-height: 1.6;
         margin: 0;
         padding: 0;
-        background-color: #f9f9f9;
     }
 
     .name-job-container {
