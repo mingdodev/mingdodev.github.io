@@ -5,13 +5,12 @@ author: "minseo"
 categories: [blog, dev]
 tags: [nodejs, spring, os]
 comments: true
+image: "/static/img/241118/nodejs-spring.png"
 hide_image: true
 ---
 # Spring Boot의 멀티 스레드와 Node.js의 비동기 프로그래밍
 
-<br><br>
-<center><img src="../../../static/img/logo/node-js.png" width="50%"></center>
-<br><br>
+<br><br><center><img src="../../../static/img/241118/nodejs-vs-spring.png" width="50%"></center><br><br><br>
 
 스프링 부트 애플리케이션의 멀티 스레드 환경에 대해 공부하다가, 싱글 스레드 환경에서 비동기로 동작하는 Node.js와 정확히 어떻게 다르게 동작하는 건지 궁금해졌다. 스프링과 구별되는 노드의 특징이라 하면 비동기 프로그래밍이 가장 먼저 떠오르는데, 개발할 때 그 차이가 확 와닿는 느낌이 아니었어서 이번 기회에 제대로 정리해보고자 한다.
 
