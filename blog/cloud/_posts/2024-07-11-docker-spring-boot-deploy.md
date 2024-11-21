@@ -5,13 +5,14 @@ author: "minseo"
 categories: [blog, cloud]
 tags: [Docker, Springboot]
 comments: true
+image: "/static/img/logo/docker-logo.png"
 hide_image: true
 ---
 # [Docker] Spring Boot 프로젝트 배포하기
 
+<br>
+<center><img src="/static/img/logo/docker-mark.png" width="25%"></center>
 <br><br>
-<center><img src="https://static-00.iconduck.com/assets.00/docker-icon-2048x522-prfhswr7.png" width="60%"></center>
-<br><br><br>
 
 돌아보니 스스로 충분히 고민해서 서비스를 배포해본 적이 없다고 느껴졌다. 또, 배포를 위한 여러 가지 툴이 있는데 경험이 부족하니 언제 이걸 쓰고 저걸 쓰는지 잘 와닿지 않았다. 그래서 공부 + 기록 목적으로 이것저것 써보고 정리해보려고 한다.
 

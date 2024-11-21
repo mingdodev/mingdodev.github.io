@@ -10,8 +10,8 @@ hide_image: true
 ---
 # [Docker] 컨테이너 기술과 Docker
 
-<br><br>
-<center><img src="https://static-00.iconduck.com/assets.00/docker-icon-2048x522-prfhswr7.png" width="60%"></center>
+<br>
+<center><img src="/static/img/logo/docker-mark.png" width="25%"></center>
 <br><br>
 
 ## 여담
@@ -148,7 +148,7 @@ cf. 리소스: CPU, 메모리, I/O, 네트워크 대역 등
 
 ## Docker의 구조
 
-<center><img src="https://docs.docker.com/guides/images/docker-architecture.webp" width="80%"></center><br>
+<center><img src="/static/img/240403/docker-architecture.png" width="100%"></center><br>
 
 도커는 클라이언트-서버 아키텍처를 사용한다. 컨테이너를 생성 및 실행하는 서버 측과 클라이언트가 통신하는 구조이다.
 
