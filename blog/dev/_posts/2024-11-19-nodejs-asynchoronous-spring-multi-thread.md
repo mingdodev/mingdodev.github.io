@@ -370,6 +370,7 @@ I/O 요청이 들어오면 외부 시스템과 상호작용하게 된다. 즉, �
     <div>
     ❗️ <a href="https://velog.io/@elon/Node.js-Worker-threads-%EC%82%AC%EC%9A%A9%EB%B2%95" target="_blank">Node.js Worker threads 사용법</a>
     </div>
+    <div>
     ❗️ <a href="https://medium.com/naverfinancial/node-js-vs-java-spring-c4699565918e" target="_blank">‘Node.js’ VS ‘Java Spring’</a>
     </div>
 </div>
