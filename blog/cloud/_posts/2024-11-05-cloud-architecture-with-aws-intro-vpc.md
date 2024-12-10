@@ -7,6 +7,9 @@ tags: [AWS, ACC, Cloud]
 comments: true
 image: "/static/img/logo/aws-logo.png"
 hide_image: true
+related_post:
+    - cloud/_posts/2024-12-02-cloud-architecture-with-aws-rds-elasticache.md
+    # - cloud/_posts/2024-12-03-cloud-architecture-with-aws-ecs-fargate.md
 ---
 # [AWS] 클라우드 아키텍처 개선으로 AWS와 친해지기
 

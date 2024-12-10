@@ -7,6 +7,8 @@ tags: [AWS, ACC, Cloud]
 comments: true
 image: "/static/img/logo/aws-logo.png"
 hide_image: true
+related_posts:
+    - cloud/_posts/2024-11-05-cloud-architecture-with-aws-intro-vpc.md
 ---
 # [AWS] 클라우드 아키텍처 AWS로 구현하기: RDS, ElastiCache
 
