@@ -9,6 +9,7 @@ image: "/static/img/logo/aws-logo.png"
 hide_image: true
 related_posts:
     - /blog/cloud/2024-11-05-cloud-architecture-with-aws-intro-vpc/
+    - /blog/cloud/2024-12-29-cloud-architecture-with-aws-ecs-fargate/
 ---
 # [AWS] 클라우드 아키텍처 AWS로 구현하기: RDS, ElastiCache
 

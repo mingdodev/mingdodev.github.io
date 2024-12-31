@@ -9,7 +9,7 @@ image: "/static/img/logo/aws-logo.png"
 hide_image: true
 related_posts:
     - /blog/cloud/2024-12-02-cloud-architecture-with-aws-rds-elasticache/
-    # - /blog/cloud/2024-12-03-cloud-architecture-with-aws-ecs-fargate/
+    - /blog/cloud/2024-12-29-cloud-architecture-with-aws-ecs-fargate/
     
 ---
 # [AWS] 클라우드 아키텍처 개선으로 AWS와 친해지기
