@@ -8,7 +8,8 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    처음부터 잘하면 외계인
+    처음부터 잘하면 외계인  
+    근데 외계인처럼 잘하고 싶어
 
   # This photo will be used in the about section
   picture:   /assets/img/about-img.png
