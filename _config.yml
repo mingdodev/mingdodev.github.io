@@ -91,7 +91,7 @@ paginate_path:         /:num/
 # ---------------------------------------------------------------------------------------
 
 # theme: jekyll-theme-hydejack
-remote_theme: hydecorp/hydejack@v9
+remote_theme: hydecorp/hydejack@v9.2.1
 
 
 # Customizaton
@@ -108,18 +108,18 @@ theme_color:           rgb(64,64,64)
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>
-google_fonts:          Nanum+Gothic
+google_fonts:          .
 
 # The text font. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
-font:                  Noto Sans, Helvetica, Arial, sans-serif, Nanum Gothic
+font:                  Pretendard, Noto Sans, Helvetica, Arial, sans-serif, Nanum Gothic
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
-font_heading:          Roboto Slab, Helvetica, Arial, sans-serif, Nanum Gothic
+font_heading:          Pretendard, Roboto Slab, Helvetica, Arial, sans-serif, Nanum Gothic
 
 # The font used for code blocks. Expects a string that is a valid CSS font-family value.
-font_code:             Fira Code, Menlo, Monaco, Consolas, monospace;
+font_code:             D2Coding, Fira Code, Menlo, Monaco, Consolas, monospace;
 
 defaults:
   # You can use this to provide a default accent color and background for
