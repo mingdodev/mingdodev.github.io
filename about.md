@@ -6,15 +6,10 @@ redirect_from:
   - /download/
 ---
 
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-</head>
-
-
 <style>
 
     body {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Pretendard';
         line-height: 1.6;
         margin: 0;
         padding: 0;
@@ -32,7 +27,7 @@ redirect_from:
     }
 
     .my-name {
-        font-weight: 700;
+        font-weight: 600;
         font-size: 32px;
         color: #333333;
         margin-bottom: 10px;
@@ -50,7 +45,9 @@ redirect_from:
         font-size: 16px;
         color: #333333;
         line-height: 1.5;
+        margin-left: 10px;
         margin-bottom: 40px;
+        margin-top: 10px;
     }
 
     .my-about-image {
@@ -82,7 +79,6 @@ redirect_from:
     }
 
     .my-degree, .my-interest-content {
-        font-weight: 400;
         font-size: 16px;
         color: #333333;
         text-align: left;
@@ -98,7 +94,6 @@ redirect_from:
     }
 
     .my-experience-content {
-        font-weight: 400;
         font-size: 16px;
         color: #333333;
         text-align: left;
@@ -107,7 +102,6 @@ redirect_from:
     }
 
     .my-experience-content-detail {
-        font-weight: 400;
         font-size: 14px;
         color: var(--gray);
         margin-left: 10px;
@@ -115,9 +109,9 @@ redirect_from:
     }
 
     .my-period {
-        font-weight: 600;
+        font-weight: 400;
         font-size: 14px;
-        color: #ADB4B9;
+        color:rgb(165, 172, 177);
         text-align: left;
         margin-left: 10px;
         margin-bottom: 10px;
@@ -182,7 +176,7 @@ redirect_from:
             </div>
         </div>
         <!-- 이미지 섹션 -->
-        <img src="/assets/img/profile-img.png" class="my-about-image" alt="My Image">
+        <img src="/assets/img/about-img.png" class="my-about-image" alt="My Image">
         <br>
     </div>
     <!-- 경험 섹션 -->
@@ -192,7 +186,7 @@ redirect_from:
             <div class="my-section">Experience</div>
             <div class="my-line"></div>
         </div>
-        <div class="my-period">March 2024 - Current</div>
+        <div class="my-period">March - December 2024</div>
         <div class="my-experience-content-wrapper">
             <div class="my-experience-content">AWS Cloud Clubs in South Korea, KHU 2nd Member</div>
         </div>
@@ -204,7 +198,7 @@ redirect_from:
         <div class="my-period">June - August 2023</div>
         <div class="my-experience-content-wrapper">
             <div class="my-experience-content">Pirogramming 19th</div>
-            <div class="my-experience-content-detail">University IT Club for Web Development</div>
+            <div class="my-experience-content-detail">Web Development Community</div>
         </div>
         <br>
     </div>
@@ -251,7 +245,7 @@ redirect_from:
         <ul class="my-interest-content">
         <li> Digging Spring Ecosystem </li>
         <li> How to build a good community for mutual growth </li>
-        <li> Seasonal food and Job's Tears Tea </li>
+        <li> Winter and Asynchrony </li>
         </ul>
         <br>
     </div>
