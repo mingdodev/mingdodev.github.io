@@ -53,7 +53,7 @@ hide_image: true
 
 #### 0. HTTP request/response 다루기
 
-본격적인 구현에 앞서, 인터셉터를 올바르게 사용하라면 자바 서블릿 API에서 HTTP 요청과 응답이 어떻게 처리되는지 이해해야 한다.
+본격적인 구현에 앞서, 인터셉터를 올바르게 사용하려면 자바 서블릿 API에서 HTTP 요청과 응답이 어떻게 처리되는지 이해해야 한다.
 
 클라이언트와 서버 간 HTTP 요청/응답 데이터는 `HttpServletRequest`와 `HttpServletResponse` 객체로 캡슐화하여 사용한다. 따라서 이 객체들을 통해 본문(body) 데이터를 직접 읽어오는 방식을 자연스럽게 생각할 수 있다.
 
