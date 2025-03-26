@@ -153,15 +153,18 @@ hide_image: true
       ai:
         openai:
           api-key: ${OPENAI_API_KEY}
-        chat:
-          options:
-          model: gpt-4o-mini
+          chat: # ChatClient 설정
+            options:
+            model: gpt-4o-mini
+            temperature: 0.7
 
 ```
 
 - Spring AI에서도 Spring Boot 자동 구성 기능을 활용할 수 있다.
 
-- 세부적인 옵션은 추후 커스텀하기 위해 공통적으로 사용되는 API 키, 모델만 자동 구성으로 설정해주었다.
+- 세부적인 옵션은 추후 커스텀하기 위해 요청에 반드시 필요한 API 키만 자동 구성으로 설정해주었다.
+
+> API 키 이외에도 chat.options와 같은 설정을 통해 주요 컴포넌트들을 자동으로 구성하고 스프링 빈으로 등록할 수 있는데, 현재 버전에서는 지원하지 않는 듯하다. 코드 저장소의 최근 커밋을 보면 Chat API 관련 컴포넌트 자동 구성은 다음 릴리즈에서 사용할 수 있을 것으로 보인다.
 
 
 #### OpenAiConfig
@@ -181,6 +184,8 @@ hide_image: true
 
 **ChatClient**는 Spring AI에서 OpenAI와 대화형 요청을 주고받을 수 있도록 제공하는 주요 컴포넌트이다.
 이후 서비스 로직 등에서 주입받아 자유롭게 사용하기 위해, ChatClient.Builder를 사용해 ChatClient를 생성하고 Spring 빈으로 등록하는 설정 파일을 만들었다.
+
+> [OpenAiChatOption](https://github.com/spring-projects/spring-ai/blob/main/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatOptions.java)을 통해 하이퍼파라미터의 디폴트 값을 설정할 수도 있다. 또는 이후 Prompt 객체를 만들 때마다 커스텀할 수도 있다.
 
 
 #### OpenAiClient
@@ -203,6 +208,8 @@ OpenAI를 도입하면서 이전에 구상했던 API 추상화 구조도 함께 
 ```
 
 - 기존에는 해당 메서드들도 여러 클라이언트에 분리되어 있었으나 `AI API 호출`이라는 명확한 역할의 인터페이스로 묶어버렸다.
+
+<br>
 
 ```java
 
@@ -231,7 +238,7 @@ OpenAI를 도입하면서 이전에 구상했던 API 추상화 구조도 함께 
 
 #### callWithStructuredOutput
 
-- 실제로 구조화된 출력을 사용하는 부분은 여기다.
+실제로 구조화된 출력을 사용하는 부분은 여기다.
 
 ```java
 
@@ -256,11 +263,24 @@ OpenAI를 도입하면서 이전에 구상했던 API 추상화 구조도 함께 
 ```
 
 - 구조화된 응답을 다양한 타입으로 받을 수 있도록, 제네릭 메서드를 만들어 재사용 가능한 API 호출 로직을 구성했다.
-이 메서드는 사용자 입력, 시스템 프롬프트, 그리고 응답 타입(Class<T>)을 받아서 OpenAI로 요청을 보내고, 스키마에 맞는 응답을 자바 객체로 변환해 반환한다.
+
+- 사용자 입력, 시스템 프롬프트, 그리고 응답 타입(Class<T>)을 받아서 OpenAI로 요청을 보내고, 스키마에 맞는 응답을 자바 객체로 변환해 반환한다.
+
+- **`BeanOutputConverter`**는 지정한 자바 클래스 타입을 기반으로 JSON Schema를 자동 생성해주는 유틸리티이다.
+
+    - Jackson의 ObjectMapper를 활용해 클래스 구조를 분석하고, OpenAI에 전달할 수 있는 JSON Schema 문자열로 변환해준다.
+    또한 응답으로 받은 JSON 문자열을 해당 타입의 자바 객체로 변환한다.
+
+    - 따라서 구조화된 응답을 처리할 때, 별도로 스키마를 수동 작성하지 않고도 타입 안전한 구조화 출력 로직을 재사용 가능한 형태로 구성할 수 있다.
+
+    - 쉽게 말해 **자바 클래스 ↔ JSON 스키마 ↔ 구조화된 JSON 응답** 사이의 중개자 역할을 한다.
+
+- 참고로 JSON 응답은 내부적으로 Jackson을 사용해 자바 객체로 매핑되므로, 응답 클래스는 record든 일반 class든 자유롭게 사용 가능하다. 다만 각 필드에 `@JsonProperty(required = true, value = "correctedContent")` 애노테이션을 사용하여 필수 항목임을 명시하고, JSON 키 이름을 정확히 지정해주는 것이 좋다.
+
 
 <br>
 
-- `extractSafeContent`를 따로 분리하여, 모델로부터 받아온 응답값에서 예외 처리를 진행할 수 있도록 만들었다.
+`extractSafeContent`를 따로 분리하여, 모델로부터 받아온 응답에서 예외 처리를 진행한 뒤 출력 데이터를 추출할 수 있도록 만들었다.
 
 ```java
 
@@ -277,7 +297,7 @@ OpenAI를 도입하면서 이전에 구상했던 API 추상화 구조도 함께 
             throw new RuntimeException(ErrorMessage.OPEN_AI_REFUSAL.toString());
         }
 
-        return message.getText();
+        return message.getText(); // JSON 응답 데이터 추출
     }
 
 ```
@@ -289,3 +309,46 @@ OpenAI를 도입하면서 이전에 구상했던 API 추상화 구조도 함께 
 <br>
 
 이렇게 구현을 완료하면, 더이상 모델이 엉뚱한 답변 또는 임의의 데이터를 응답값에 포함하지 않게 된다!
+
+<br>
+
+---
+
+## 번외: Spring AI ChatClient의 entity()
+
+한 가지 trial and error를 소개하자면, Spring AI Docs에는 Structured Outputs라는 탭이 따로 있어 fluent ChatClient API로 구조화된 출력을 사용하는 방법을 설명하고 있다.
+
+<br>
+
+```java
+
+    chatClient.prompt()
+            .system(prompt)
+            .user(content)
+            .call()
+            .entity(AiSearchTypeResponse.class);
+
+```
+
+문서에 따르면, 이렇게 `.entity()` 메서드에 응답 형식을 갖춘 클래스 타입을 지정하기만 하면 구조화된 출력을 요청하고 해당 타입으로 응답을 받아오는 것까지 자동으로 수행해준다고 나와있다. 그러나 코드 흐름을 따라가보면...
+
+<br>
+
+```java
+
+    public String getFormat() {
+        String template = "Your response should be in JSON format.\nDo not include any explanations, only provide a RFC8259 compliant JSON response following this format without deviation.\nDo not include markdown code blocks in your response.\nRemove the ```json markdown from the output.\nHere is the JSON Schema instance your output must adhere to:\n```%s```\n";
+        return String.format(template, this.jsonSchema);
+    }
+
+```
+
+`doSingleWithBeanOutputConverter()` 메서드에는 모델에게 요청을 보내는 코드와 응답을 받아오는 코드가 순차적으로 작성되어 있다. 여기서 요청을 보내는 부분의 `getFormat()`을 살펴보면, 이 로직은 응답 형식을 100% 강제하는 방식이 아니라 단순히 프롬프트에 스키마를 전달하여 응답 형식을 유도하는 정도이다.
+
+<br>
+
+어떻게 보면 당연한 결과다. Spring AI는 OpenAI에만 특화된 라이브러리가 아니기 때문에, `.entity()`를 사용할 때도 응답 형식을 정확히 강제하기보다는 프롬프트 기반 유도로 처리하는 게 자연스럽다. Spring AI는 유연한 추상화를 제공하고, 우리는 그 안에서 **모델의 특성에 맞게 전략을 선택**하면 된다.
+
+그러므로 보장된 구조화된 출력이 필요하다면, OpenAI LLM과 함께 지정된 필드에 필요한 데이터를 보내는 방식으로 구현하자!
+
+다른 LLM들도 구조화된 출력을 보장할 때까지 화이팅~
