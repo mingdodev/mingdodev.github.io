@@ -3,7 +3,7 @@ layout: post
 title:  "[Spring] Spring AI로 OpenAI 구조화된 출력(Structured Outputs) 사용하기"
 author: "minseo"
 categories: [blog, dev]
-tags: [Spring, Logging, NCP]
+tags: [Spring, AI, OpenAI]
 comments: true
 image: "/static/img/logo/spring-ai-logo.png"
 hide_image: true
