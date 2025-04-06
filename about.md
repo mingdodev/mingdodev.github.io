@@ -245,7 +245,7 @@ redirect_from:
         <ul class="my-interest-content">
         <li> Digging Spring Ecosystem </li>
         <li> How to build a good community for mutual growth </li>
-        <li> Winter and Asynchrony </li>
+        <li> Asynchronous programming and test code — enjoying the process of making systems fast, reliable, and maintainable. </li>
         </ul>
         <br>
     </div>
