@@ -3,7 +3,7 @@ layout: post
 title:  "[NCP] 운영 서버 디스크 부족 대응기: 디스크 증설과 마운트 관리"
 author: "minseo"
 categories: [blog, dev]
-tags: [Spring, Logging, NCP]
+tags: [NCP, Linux, Storage, OS]
 comments: true
 image: "/static/img/250409/ncp-block-storage.png"
 hide_image: true
