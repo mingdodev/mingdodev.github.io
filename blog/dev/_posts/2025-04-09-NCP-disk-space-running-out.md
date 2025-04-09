@@ -176,11 +176,11 @@ NCP 콘솔에서 새로운 디스크를 생성하고, 서버에서 사용할 수
     sudo nano /etc/fstab
 
     # 아래 설정 추가
-    UUID=21ef9e4e-993a-40d4-938d-2cc224217c67 /mnt/data ext4 defaults 0 2
+    UUID={아까 복사한 UUID 값} /mnt/data ext4 defaults 0 2
 
 ```
 
-- 순서대로 볼륨, 마운트 포인트, 파일 시스템 종류, 옵션, 덤프, fsck 설정이다.
+- 순서대로 볼륨을 나타내는 UUID(경로 이름으로도 대체 가능하다), 마운트 포인트, 파일 시스템 종류, 옵션, 덤프, fsck 설정이다.
 
 - defaults 옵션을 사용하면, 부팅 시 자동으로 읽기와 쓰기가 가능하도록 마운트된다. 좀 더 자세한 설명은 [공식 문서](https://guide.ncloud-docs.com/docs/ko/server-storage-classic#%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80-%EB%A7%88%EC%9A%B4%ED%8A%B8linux)를 참고
 
