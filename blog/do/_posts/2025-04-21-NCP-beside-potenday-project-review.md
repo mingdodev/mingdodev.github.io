@@ -111,8 +111,10 @@ AI 검색을 단기에 MVP로서 완성하기 위해서는 많은 고민이 필�
 
 <br>
 
-북카이브 팀은 이러한 MVP를 담은 서비스를 출시했고, [App Store](https://apps.apple.com/kr/app/%EB%B6%81%EC%B9%B4%EC%9D%B4%EB%B8%8C/id6742368090)에서 다운로드할 수 있다!
-조금 더 디벨롭된 기능은 [현재 진행중인 CBT](https://brunch.co.kr/@button/34)를 통해 경험할 수 있다 🙌
+북카이브 팀은 이렇게 세 가지의 MVP를 담은 서비스를 출시했고, [App Store](https://apps.apple.com/kr/app/%EB%B6%81%EC%B9%B4%EC%9D%B4%EB%B8%8C/id6742368090)에서 만나볼 수 있다.  
+조금 더 디벨롭된 기능은 [현재 진행중인 CBT](https://brunch.co.kr/@button/34)를 통해 경험할 수 있다!
+
+<br>
 
 ---
 
