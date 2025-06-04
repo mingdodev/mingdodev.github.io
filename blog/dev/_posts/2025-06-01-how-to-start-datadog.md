@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Datadog] NCP 서버에서 Datadog 모니터링 시작하기"
+title:  "[Datadog] Datadog으로 서버 모니터링 시작하기"
 author: "minseo"
 categories: [blog, dev]
 tags: [Monitor, datadog, APM]
@@ -8,11 +8,11 @@ comments: true
 image: "/static/img/250601/datadog-logo.png"
 hide_image: true
 ---
-# [Datadog] NCP 서버에서 Datadog 모니터링 시작하기
+# [Datadog] Datadog으로 서버 모니터링 시작하기
 
 <center><img src="../../../static/img/250601/datadog-logo.png" width="100%"></center><br>
 
-북카이브 앱 서비스를 운영할 때 모니터링을 위해 Datadog을 도입했었다. 🐶
+NCP 서버 위에서 북카이브 앱 서비스를 운영할 때 모니터링을 위해 Datadog을 도입했었다. 🐶
 
 NCP가 표면적으로는 인스턴스를 빌려주는 하나의 클라우드 플랫폼이지만, Datadog과의 통합을 얘기할 땐 좀 달라진다. AWS, GCP, Azure와 같이 공식 통합을 지원하는 플랫폼들은 클라우드 계정을 기반으로 더 쉽고 강력하게 통합된다. NCP는 그렇지 않기 때문에, 에이전트를 설치하고 수집할 메트릭을 직접 다루는 과정이 더 많이 필요하다.
 
@@ -22,9 +22,7 @@ NCP가 표면적으로는 인스턴스를 빌려주는 하나의 클라우드 �
 
 ---
 
-## Datadog?
-
-#### 도입 배경
+## 도입 배경
 
 백엔드 개발 환경에서 API 테스트를 수행했음에도 실제 앱에서 들어오는 요청은 예상과 다를 때가 있었다. 처음엔 간단한 로깅으로 에러를 해결했지만, 갈수록 모든 걸 로깅으로 처리하기에는 애플리케이션이 너무 많은 책임을 갖는 모양이 되었다. 또 특히 이번에는 서버를 혼자서만 관리했기에 다른 팀원들에게 보이지 않는 서버 동작을 시각화해서 보여줄 무언가 필요했다. 때문에 "지금이 모니터링을 도입할 때다!"라는 생각이 들어 필요한 메트릭을 원할 때 관찰할 수 있는 모니터링 시스템을 구축하게 되었다.
 
@@ -62,11 +60,11 @@ NCP가 표면적으로는 인스턴스를 빌려주는 하나의 클라우드 �
 
 먼저 NCP 서버 자체의 리소스를 모니터링하기 위해, 서버에 Datadog Agent를 설치해야 한다. 왼쪽 탭의 아래에 있는 `Integration`으로 들어가면 에이전트를 설치할 수 있는 UI가 따로 제공된다.
 
-<br><center><img src="../../../static/img/250601/datadog-agent-initial-1.png" width="100%"></center>
+<br><center><img src="../../../static/img/250601/datadog-agent-initial-1.png" width="100%"></center><br>
 
 여기서 해당하는 서버 운영체제를 선택해준다.
 
-<br><center><img src="../../../static/img/250601/datadog-agent-initial-2.png" width="100%"></center>
+<br><center><img src="../../../static/img/250601/datadog-agent-initial-2.png" width="100%"></center><br>
 
 이 순서를 그대로 따라해서 에이전트를 설치하면 된다.
 첫 번째는 Observability 범위를 선택하는 부분인데, 필요에 따라 선택해주면 된다. 나는 이 서버 인프라 바로 위에서 애플리케이션을 운영하고 있지 않아, APM은 여기서 활성화하지 않았다.
