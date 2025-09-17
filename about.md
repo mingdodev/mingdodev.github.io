@@ -90,7 +90,7 @@ redirect_from:
     .my-experience-content-wrapper {
         display: flex;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .my-experience-content {
@@ -106,6 +106,7 @@ redirect_from:
         color: var(--gray);
         margin-left: 10px;
         margin-bottom: 0;
+        margin-top: 2px;
     }
 
     .my-period {
@@ -114,7 +115,7 @@ redirect_from:
         color:rgb(165, 172, 177);
         text-align: left;
         margin-left: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 3px;
     }
 
     .my-skills-wrapper {
@@ -165,14 +166,12 @@ redirect_from:
         <!-- 텍스트 섹션 -->
         <div class="text-container">
             <span class="my-name">Minseo Jang</span>
-            <span class="my-job">Server Developer</span>
+            <span class="my-job">Backend Engineer</span>
             <div class="my-bio">
                 <br>
-                feat: grow <strong>every moment</strong><br>
-                style: focus on building <strong>reasonable</strong> solutions<br>
-                docs: <strong>share</strong> learned things<br><br>
-                Delighted to meet you 👋<br>
-                I am a happy developer who loves challenges!
+                I am a happy developer who loves challenges. 🚀
+                <br>
+                I'll be a developer who builds bridges through technology!
             </div>
         </div>
         <!-- 이미지 섹션 -->
@@ -186,16 +185,25 @@ redirect_from:
             <div class="my-section">Experience</div>
             <div class="my-line"></div>
         </div>
-        <div class="my-period">March - December 2024</div>
+        <div class="my-period">2025.09. - Current.</div>
         <div class="my-experience-content-wrapper">
-            <div class="my-experience-content">AWS Cloud Clubs in South Korea, KHU 2nd Member</div>
+            <div class="my-experience-content">GDG on Campus KHU 2nd</div>
         </div>
-        <div class="my-period">August - December 2023</div>
+        <div class="my-period">2024.03. - 2025.07.</div>
+        <div class="my-experience-content-wrapper">
+            <div class="my-experience-content">KHLUG Design & Branding Lead</div>
+            <div class="my-experience-content-detail">IT Student Club at Kyung Hee University</div>
+        </div>
+        <div class="my-period">2024.03. - 2024.12.</div>
+        <div class="my-experience-content-wrapper">
+            <div class="my-experience-content">AWS Cloud Clubs in South Korea KHU 2nd</div>
+        </div>
+        <div class="my-period">2023.08. - 2024.02.</div>
         <div class="my-experience-content-wrapper">
             <div class="my-experience-content">Pironeer 1st</div>
             <div class="my-experience-content-detail">Official Development Team for Pirogramming</div>
         </div>
-        <div class="my-period">June - August 2023</div>
+        <div class="my-period">2023.06. - 2023.08.</div>
         <div class="my-experience-content-wrapper">
             <div class="my-experience-content">Pirogramming 19th</div>
             <div class="my-experience-content-detail">Web Development Community</div>
@@ -214,21 +222,22 @@ redirect_from:
                 <div class="my-skill-name">Programming Languages</div>
                 <div class="my-skills">
                     <img src="/assets/img/skills/java.png">
-                    <img class="my-skills-opacity" src="/assets/img/skills/python.png">
+                    <img src="/assets/img/skills/python.png">
                 </div>
             </div>
             <div>
                 <div class="my-skill-name">Backend Development</div>
                 <div class="my-skills">
                     <img src="/assets/img/skills/spring.png">
-                    <img class="my-skills-opacity" src="/assets/img/skills/expressjs.png">
-                    <img class="my-skills-opacity" src="/assets/img/skills/django.png">
+                    <img src="/assets/img/skills/expressjs.png">
+                    <img src="/assets/img/skills/django.png">
                 </div>
             </div>
             <div>
                 <div class="my-skill-name">DevOps / Cloud Services</div>
                 <div class="my-skills">
                     <img src="/assets/img/skills/aws.png">
+                    <img src="/assets/img/skills/ncp.png" >
                     <img src="/assets/img/skills/docker.png">
                 </div>
             </div>
