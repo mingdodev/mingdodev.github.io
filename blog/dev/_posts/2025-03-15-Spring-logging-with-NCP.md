@@ -306,3 +306,11 @@ NCP 콘솔에서 `Management & Governance > Cloud Log Analytics` 서비스에 �
 - 여러 NCP 서비스에 분산된 서버가 많고 로그 형태가 다양한 경우 CLA의 장점을 더욱 활용할 수 있을 것 같다!
 
 - 이렇게 저장된 로그는 **NCP Sub Account**를 팀원들과 공유함으로써 개발 직군이 아닌 팀원들도 활용할 수 있게 된다.
+
+<br><br>
+
+---
+
+<br><br>
+
+<center><img src="../../../assets/img/Nclouder-bar.png" width="70%"></center><br>
