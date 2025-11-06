@@ -3,7 +3,7 @@ layout: post
 title:  "[JPA] OSIV로 본 책임 분리 vs 성능 최적화 (feat. N+1 문제)"
 author: "minseo"
 categories: [blog, dev]
-tags: [spring, redis]
+tags: [spring, jpa]
 comments: true
 image: "/static/img/logo/spring-logo.png"
 hide_image: true
