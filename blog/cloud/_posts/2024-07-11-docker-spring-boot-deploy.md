@@ -80,8 +80,8 @@ hide_image: true
 
     # Dockerfile
 
-    # OpenJDK 17 기반 이미지 사용
-    FROM openjdk:17
+    # JDK 17 기반 이미지 사용
+    FROM eclipse-temurin:17
 
     # 해당 위치 jar 형식의 파일을 JAR_FILE 변수로 정의
     ARG JAR_FILE=build/libs/*.jar
@@ -95,6 +95,10 @@ hide_image: true
 ```
 
 - 도커 파일을 작성해준다.
+
+> **2025.12. 도커 이미지 수정**  
+> Docker Hub의 `openjdk` 공식 이미지는 2022년 7월을 마지막으로 유지보수가 중단되었다. 보안 및 안정성 문제로 인해 더 이상 사용이 권장되지 않으며, 최근에는 일부 태그(`openjdk:17` 등)가 실제로 pull 불가 상태가 되어 이미지 교체가 필요해졌다.
+> 이에 따라 Temurin, Corretto 등 다른 JDK 벤더의 이미지를 사용하는 방향으로 전환했다.
 
 <br>
 
