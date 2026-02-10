@@ -11,7 +11,7 @@ hide_image: true
 
 # [Spring] Spring Cloud Gateway MSA 환경에서 Swagger UI 연동하기 (1)
 
-<br><br><center><img src="../../../static/img/logo/spring-cloud-logo-big.png" width="40%"></center><br><br><br><br>
+<br><br><center><img src="../../../static/img/logo/spring-cloud-logo-big.png" width="30%"></center><br><br><br><br>
 
 최근 강의를 통해 Spring Cloud 기반의 MSA 프로젝트를 학습하며 전체적인 아키텍처를 익히고 있었다. 강의에서는 Swagger UI를 단순히 개별 마이크로서비스에 붙여 개념을 소개하는 정도로만 다뤘는데, 나는 조금 더 보완해 실제 MSA 환경처럼 **Gateway 뒤에 숨겨진 서비스들의 문서를 통합 관리하는 환경**을 직접 구축해보고 싶었다.
 
@@ -151,7 +151,7 @@ server:
 
 <br>
 
-결과적으로 Gateway는 라우팅에만 집중하고, 문서화 책임은 각 서비스가 가져가는 구조를 완성할 수 있었다. 다음 포스팅에서는 여러 마이크로서비스의 API 문서를 Gateway 단에서 하나로 묶어 보여주는 통합 Swagger UI 구성 방식도 구현해 보아야 겠다.
+결과적으로 Gateway는 라우팅에만 집중하고, 문서화 책임은 각 서비스가 가져가는 구조를 완성할 수 있었다. 다음에서는 여러 마이크로서비스의 API 문서를 Gateway 단에서 하나로 묶어 보여주는 통합 Swagger UI 구성 방식도 구현해 보아야 겠다.
 
 <br><br>
 <details>
