@@ -1,20 +1,48 @@
 {% if page.comments %}
 <aside class="comments related" role="complementary">
   <h2 class="hr-bottom">{{ site.data.strings.comments | default:"Comments" }}</h2>
-  <script src="https://giscus.app/client.js"
-        data-repo="mingdodev/mingdodev.github.io"
-        data-repo-id="R_kgDOLXr23g"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOLXr23s4CeVeo"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="0"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="noborder_light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
+  <div id="giscus-container" aria-live="polite"></div>
+
+  <script>
+  (function(){
+    const container = document.getElementById('giscus-container');
+    if (!container) return;
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      if (!entries[0].isIntersecting) return;
+
+      if (document.querySelector('script[data-giscus-lazy]')) {
+        obs.disconnect();
+        return;
+      }
+
+      const s = document.createElement('script');
+      s.src = 'https://giscus.app/client.js';
+      s.async = true;
+      s.setAttribute('data-giscus-lazy', '1');
+      s.setAttribute('data-repo', 'mingdodev/mingdodev.github.io');
+      s.setAttribute('data-repo-id', 'R_kgDOLXr23g');
+      s.setAttribute('data-category', 'Announcements');
+      s.setAttribute('data-category-id', 'DIC_kwDOLXr23s4CeVeo');
+      s.setAttribute('data-mapping', 'pathname');
+      s.setAttribute('data-strict', '0');
+      s.setAttribute('data-reactions-enabled', '0');
+      s.setAttribute('data-emit-metadata', '0');
+      s.setAttribute('data-input-position', 'top');
+      s.setAttribute('data-theme', 'noborder_light');
+      s.setAttribute('data-lang', 'en');
+      s.crossOrigin = 'anonymous';
+
+      container.appendChild(s);
+      obs.disconnect();
+    }, { root: null, rootMargin: '200px 0px', threshold: 0 });
+
+    observer.observe(container);
+  })();
+  </script>
+
+  <noscript>
+    <p>Please enable JavaScript to view comments.</p>
+  </noscript>
 </aside>
 {% endif %}
