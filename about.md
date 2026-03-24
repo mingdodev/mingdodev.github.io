@@ -185,9 +185,14 @@ redirect_from:
             <div class="my-section">Experience</div>
             <div class="my-line"></div>
         </div>
-        <div class="my-period">2025.09. - Current.</div>
+        <div class="my-period">2026.02. - Current.</div>
         <div class="my-experience-content-wrapper">
-            <div class="my-experience-content">GDG on Campus KHU 2nd</div>
+            <div class="my-experience-content">Mash-Up 16th Spring Team</div>
+            <div class="my-experience-content-detail">IT Development Community</div>
+        </div>
+        <div class="my-period">2025.09. - 2026.02.</div>
+        <div class="my-experience-content-wrapper">
+            <div class="my-experience-content">Google Developer Groups on Campus KHU 2nd</div>
         </div>
         <div class="my-period">2024.03. - 2025.07.</div>
         <div class="my-experience-content-wrapper">
@@ -222,6 +227,7 @@ redirect_from:
                 <div class="my-skill-name">Programming Languages</div>
                 <div class="my-skills">
                     <img src="/assets/img/skills/java.png">
+                    <img src="/assets/img/skills/kotlin.png">
                     <img src="/assets/img/skills/python.png">
                 </div>
             </div>
@@ -253,8 +259,7 @@ redirect_from:
         </div>
         <ul class="my-interest-content">
         <li> Digging Spring Ecosystem </li>
-        <li> How to build a good community for mutual growth </li>
-        <li> Asynchronous programming and test code — enjoying the process of making systems fast, reliable, and maintainable. </li>
+        <li> Learning Asynchronous and Event-Driven System Design </li>
         </ul>
         <br>
     </div>
